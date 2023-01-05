@@ -9,6 +9,6 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/lines")
+def read_item():
+    return {"line": "line2","direction":"Casa de Papel", "time": str(random.randint(1, 6))}
